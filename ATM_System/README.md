@@ -68,18 +68,19 @@ Setup Database:
 Create MySQL database named atm_system
 Execute the SQL schema queries above
 Insert sample data for admin and users
-Configure Connection:
 
+Configure Connection:
 Update DBConnection.java with your MySQL credentials if different
 Compile:
-
 bash
 javac *.java
-Run:
 
+Run:
 bash
 java Main
+
 📝 Usage
+
 For Users:
 Run the application
 Enter your user PIN when prompted
@@ -89,6 +90,7 @@ Withdraw funds
 Check balance
 View transaction history
 Exit
+
 For Admin:
 Run the application
 Enter admin PIN when prompted
@@ -97,30 +99,36 @@ View ATM balance
 Deposit money to ATM
 Withdraw money from ATM
 Exit
+
 ⚙️ Key Operations
 Deposit Transaction:
 Update user's account balance
 Update ATM's total cash
 Record transaction in transactions table
+
 Withdraw Transaction:
 Validate sufficient balance in user account
 Validate sufficient cash in ATM
 If valid: Update both balances and record transaction
 If invalid: Display error message
+
 Mini Statement:
 Displays last 5 transactions ordered by date (newest first)
 Shows transaction type, amount, and timestamp
+
 🔐 Security Notes
 Currently uses PIN-based authentication (can be enhanced with encryption)
 Database credentials are hardcoded (should use configuration files in production)
 Input validation could be improved for production use
 SQL Injection protection: Uses PreparedStatements
+
 🚨 Important Notes
 This is a console-based educational project
 For production use, implement proper security measures
 Add comprehensive error handling and validation
 Implement transaction rollback mechanisms
 Consider adding account creation/deletion features
+
 📧 Support
 For issues or improvements, please contribute to the repository.
 
